@@ -14,7 +14,7 @@ pruning for AI decision-making.
 ### Building and Running
 
 ```bash
-git clone [https://github.com/4ster-light/chess.git](https://github.com/4ster-light/chess.git)
+git clone https://github.com/4ster-light/chess.git
 cd chess
 dotnet run
 ```
