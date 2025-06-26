@@ -297,7 +297,6 @@ let rec minimax gameState depth alpha beta maximizingPlayer =
 
             minEval
 
-// Find the best move
 let findBestMove gameState depth =
     let moves = generateMoves gameState
 
@@ -312,8 +311,8 @@ let findBestMove gameState depth =
             let score = minimax newGameState depth -10000 10000 (gameState.ActiveColor = Black)
 
             if
-                (gameState.ActiveColor = White && score > bestScore)
-                || (gameState.ActiveColor = Black && score < bestScore)
+                gameState.ActiveColor = White && score > bestScore
+                || gameState.ActiveColor = Black && score < bestScore
             then
                 bestScore <- score
                 bestMove <- move
